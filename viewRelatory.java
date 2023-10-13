@@ -22,7 +22,7 @@ public class viewRelatory {
     }
 
     
-    public static void exibirRelatorio(Transport transp){
+    public static void viewRelat(Transport transp){
         double totalCost;
         double costPSegment;
         String typeTransp;
@@ -36,17 +36,17 @@ public class viewRelatory {
 
 
         System.out.println("\n"+"------------------------------------"+
-                            "\n"+"     Relatório dos Transportes     "+"\n"+
-                            "\n"+"Caminhão: "+typeTransp+
-                            "\n"+"Custo Total: "+totalCost+
-                            "\n"+"Custo p/ Trecho: "+costPSegment+
-                            "\n"+"Custo Médio p/KM: "+averageCostPKm+
-                            "\n"+"Custo Médio por Tipo de Produto: "+averageCostPProduct+
-                            "\n"+"Custo Total p/ Trecho: "+totalCostPSegment+
-                            "\n"+"Custo Total p/ cada Transporte: "+totalCostFTransport+
-                            "\n"+"Número Total de Veículos Deslocados: "+vehDesl+
-                            "\n"+"Total de Itens Transportados: "
-                            +exibirProdEnviados(transp)+
+                            "\n"+"     Report of Transports     "+"\n"+
+                            "\n"+"Truck: "+typeTransp+
+                            "\n"+"Total Cost: "+totalCost+
+                            "\n"+"Cost p/ Segment: "+costPSegment+
+                            "\n"+"Average Cost p/KM: "+averageCostPKm+
+                            "\n"+"Average Cost p/ Type of Product: "+averageCostPProduct+
+                            "\n"+"Total Cost p/ Segment: "+totalCostPSegment+
+                            "\n"+"Total Cost for each Transport: "+totalCostFTransport+
+                            "\n"+"Total of Moved Vehicles: "+vehDesl+
+                            "\n"+"Total Itens Transported: "
+                            +viewRelat(transp)+
                             "\n"+"------------------------------------"+"\n");
     }
 
