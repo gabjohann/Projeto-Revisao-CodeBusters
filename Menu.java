@@ -61,37 +61,4 @@ public class Menu {
             toReturn = scan.nextLine();
         } while (!toReturn.isEmpty());
     }
-
-
-    //Main class of menu
-    public static void main(String[] args) {
-        int option;
-        Scanner scan = new Scanner(System.in);
-
-        do {
-            menu();
-            option = scan.nextInt();
-
-            switch (option){
-                case 1 :
-                    CheckRoutesAndModalities();
-                    break;
-
-                case 2 :
-                    RegisterTransport();
-                    break;
-
-                case 3 :
-                    CheckAnalytics();
-                    break;
-
-                case 4 :
-                    System.out.println(ANSI_RED + "Encerrando..." + ANSI_RESET);
-                    break;
-
-                default :
-                    System.out.println(ANSI_RED + "Opção inválida! Digite de 1 a 3 para as opções ou 4 para sair" + ANSI_RESET);
-            }
-        } while (option != 4);
-    }
 }
