@@ -8,7 +8,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CheckDistances {
-    String filePath = "src\\DistanciasCidadesCSV.csv";
+    String filePath = "src\\CitiesDistances.csv";
     List<String> cities = new ArrayList<>();
     int[][] distances = null;
     int countRows = 0;
