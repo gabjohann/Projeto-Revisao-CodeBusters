@@ -51,4 +51,5 @@ public class CheckDistances {
     public int getDistance(int originCity, int destinationCity) {
         return distances[originCity][destinationCity];
     }
+
 }

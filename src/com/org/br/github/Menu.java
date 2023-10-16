@@ -9,7 +9,6 @@ public class Menu {
         int quantityProducts;
         int productNumber;
         int quantityPerProduct;
-
         List<String> listOfCities = new ArrayList<>(List.of("ARACAJU", "BELEM", "BELO HORIZONTE", "BRASILIA", "CAMPO GRANDE", "CUIABA", "CURITIBA", "FLORIANOPOLIS", "FORTALEZA", "GOIANIA", "JOAO PESSOA", "MACEIO", "MANAUS", "NATAL", "PORTO ALEGRE", "PORTO VELHO", "RECIFE", "RIO BRANCO", "RIO DE JANEIRO", "SALVADOR", "SAO LUIS", "SAO PAULO", "TERESINA", "VITORIA"));
         List<String> listOfProducts = new ArrayList<>(List.of("Celular", "Geladeira", "Air Fryer", "Cadeira", "Luminária", "Lavadora de Roupa", "PlayStation 5", "Nintendo Switch"));
         Map<Integer, Integer> desiredProducts = new HashMap<>();
