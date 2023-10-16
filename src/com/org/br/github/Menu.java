@@ -1,75 +1,102 @@
-import java.util.*;
+import java.util.Scanner;
 
 public class Menu {
 
-    public static void main(String[] args) {
-        Scanner scanner = new Scanner(System.in);
-        String cityOfOrigin;
-        String cityOfDestination;
-        int quantityProducts;
-        int productNumber;
-        int quantityPerProduct;
-        List<String> listOfCities = new ArrayList<>(List.of("ARACAJU", "BELEM", "BELO HORIZONTE", "BRASILIA", "CAMPO GRANDE", "CUIABA", "CURITIBA", "FLORIANOPOLIS", "FORTALEZA", "GOIANIA", "JOAO PESSOA", "MACEIO", "MANAUS", "NATAL", "PORTO ALEGRE", "PORTO VELHO", "RECIFE", "RIO BRANCO", "RIO DE JANEIRO", "SALVADOR", "SAO LUIS", "SAO PAULO", "TERESINA", "VITORIA"));
-        List<String> listOfProducts = new ArrayList<>(List.of("Celular", "Geladeira", "Air Fryer", "Cadeira", "Luminária", "Lavadora de Roupa", "PlayStation 5", "Nintendo Switch"));
-        Map<Integer, Integer> desiredProducts = new HashMap<>();
+    Scanner scanner = new Scanner(System.in);
 
-        System.out.println("Seja bem vindo(a) a Amarelinha! A empresa com transporte mais rápido do planeta.");
-        System.out.println("Cidades atendidas: ");
-
-        for (int i = 0; i < listOfCities.size(); i++) {
-            System.out.println(i + 1 + ":" + listOfCities.get(i));
-        }
-
-        System.out.print("Digite o número da cidade de origem: ");
-        cityOfOrigin = scanner.next();
-
-        if (Integer.parseInt(cityOfOrigin) < 1 || Integer.parseInt(cityOfOrigin) > 24) {
-            scanner.nextLine();
-            System.out.println("Infelizmente não atendemos esta cidade, informe outra.");
-            System.out.print("Digite o número da cidade de origem: ");
-            cityOfOrigin = scanner.next();
-        }
-
-        System.out.print("Digite o número da cidade de destino: ");
-        cityOfDestination = scanner.next();
-
-        if (Integer.parseInt(cityOfDestination) < 1 || Integer.parseInt(cityOfDestination) > 24) {
-            scanner.nextLine();
-            System.out.println("Infelizmente não atendemos esta cidade, informe outra.");
-            System.out.print("Digite o número da cidade de destino: ");
-            cityOfDestination = scanner.next();
-        }
+    //Using pseudocode to use ANSI colors
+    public static final String ANSI_RESET = "\u001B[0m";
+    public static final String ANSI_YELLOW = "\u001B[33m";
+    public static final String ANSI_RED = "\u001B[31m";
 
 
-        System.out.println("Produtos que transportamos: ");
-        for (int i = 0; i < listOfProducts.size(); i++) {
-            System.out.print(listOfProducts.get(i));
+    public void menu() {
 
-            if (i < listOfProducts.size() - 1) {
-                System.out.print(", ");
+        boolean loop = true;
+        String option = "";
+
+        do {
+
+            System.out.println("\n\n" + ANSI_YELLOW + "#########################################");
+            System.out.println("|--Sistema de Transporte da Amarelinha--|");
+            System.out.println("#########################################");
+            System.out.println("|--1. Consultar Trechos e Modalidades---|");
+            System.out.println("|--2. Cadastrar Transporte--------------|");
+            System.out.println("|--3. Dados Estatísticos----------------|");
+            System.out.println("|--4. Finalizar o Programa--------------|");
+            System.out.println("#########################################");
+            System.out.print("Digite a opção desejada: " + ANSI_RESET);
+
+
+            if (option.equalsIgnoreCase("sair")) {
+                System.out.println(ANSI_RED + "Programa encerrado!" + ANSI_RESET);
+                loop = false;
             }
-        }
 
-        System.out.print("\nQuantos produtos destintos você deseja transportar? ");
-        quantityProducts = scanner.nextInt();
-        System.out.println("\nMenu de produtos:");
+            option = scanner.nextLine();
 
-        for (int i = 0; i < listOfProducts.size(); i++) {
-            System.out.println(i + 1 + ": " + listOfProducts.get(i));
-        }
+            switch (option) {
+                case "1" -> CheckRoutesAndModalities();
+                case "2" -> RegisterTransport();
+                case "3" -> CheckAnalytics();
+                case "4" -> {
+                    System.out.println(ANSI_RED + "Programa encerrado!" + ANSI_RESET);
+                    loop = false;
+                }
+                default ->
+                        System.out.println(ANSI_RED + "Opção inválida! Digite de 1 a 3 para as opções ou 4 para sair" + ANSI_RESET);
+            }
 
-        System.out.println();
-
-        for (int i = 0; i < quantityProducts; i++) {
-            System.out.print("Digite o número do produto desejado: ");
-            productNumber = scanner.nextInt();
-            System.out.print("Digite a quantidade desejada: ");
-            quantityPerProduct = scanner.nextInt();
-
-            desiredProducts.put(productNumber, quantityPerProduct);
-        }
+            if (loop) {
+                System.out.print("Digite 'sair' para encerrar o programa: ");
+            }
 
 
-        System.out.println("Mostrar a distância das cidades e custo total estimado para o trecho");
+        } while (loop);
+
     }
+
+    public void CheckRoutesAndModalities() {
+        String toReturn;
+
+        do {
+
+            //Insert here the first case method
+
+
+            System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
+            toReturn = scanner.nextLine();
+        } while (!toReturn.isEmpty());
+    }
+
+    public void RegisterTransport() {
+
+        String toReturn;
+
+
+        do {
+
+            //Insert here the second case method
+
+
+            System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
+            toReturn = scanner.nextLine();
+        } while (!toReturn.isEmpty());
+    }
+
+    public void CheckAnalytics() {
+        String toReturn;
+        Scanner scanner = new Scanner(System.in);
+
+        do {
+
+            //Insert here the third case method
+
+
+            System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
+            toReturn = scanner.nextLine();
+        } while (!toReturn.isEmpty());
+    }
+
+
 }

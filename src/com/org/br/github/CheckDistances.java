@@ -1,5 +1,3 @@
-package src.com.org.github;
-
 import java.io.BufferedReader;
 import java.io.FileReader;
 import java.io.IOException;
@@ -8,7 +6,7 @@ import java.util.Arrays;
 import java.util.List;
 
 public class CheckDistances {
-    String filePath = "src\\CitiesDistances.csv";
+    String filePath = "CitiesDistances.csv";
     List<String> cities = new ArrayList<>();
     int[][] distances = null;
     int countRows = 0;
@@ -45,10 +43,12 @@ public class CheckDistances {
     }
 
     public List<String> getCities() {
+        readFile();
         return cities;
     }
 
     public int getDistance(int originCity, int destinationCity) {
+        readFile();
         return distances[originCity][destinationCity];
     }
 
