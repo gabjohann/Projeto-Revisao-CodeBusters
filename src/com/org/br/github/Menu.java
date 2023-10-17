@@ -77,8 +77,7 @@ public class Menu {
 
         do {
 
-            RegisterTransport.transportRegister();
-
+              RegisterTransport.transportRegister();
 
             System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
             toReturn = scanner.nextLine();
