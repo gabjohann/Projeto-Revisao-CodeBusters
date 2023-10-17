@@ -77,7 +77,7 @@ public class Menu {
 
         do {
 
-            //Insert here the second case method
+            RegisterTransport.transportRegister();
 
 
             System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
