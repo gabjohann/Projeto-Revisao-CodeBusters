@@ -19,6 +19,9 @@ public class TheBestTruck {
         return maximumCapacity;
     }
 
+    public double getPricePerKm() {
+        return pricePerKm;
+    }
 
     //Calcula o custo por km pegando o preço por km * a distância fornecida
     public double calculateCostPerKm(double distance) {
