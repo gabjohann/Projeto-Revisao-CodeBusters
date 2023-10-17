@@ -2,27 +2,27 @@
 
 public class viewRelatory {
     
-//Statistical Data
+//Dados Estatísticos
 
-//View report of registered transports: (total cost, cost per segment, average cost per km,
-//average cost per product, total cost per segment, total cost for each mode of transport,
-//the total number of vehicles moved and the total number of items transported);
+//exibir relatório dos transportes cadastrados: (custo total, custo por trecho, custo médio p/ km,
+//custo médio p/ produto, custo total p/ trecho, custo total para cada modalidade de transporte,
+//o número total de veículos deslocados e o total de itens transportados);
 
 //view = system.out.println("");
 
-    public static void viewProdSent(Transport transp){ //created to ease the funcionality view ---> view all the products sent in transports
+    public static void viewProdSent(Transport transp){ //criada para facilitar a funcionalidade exibir ---> exibir todos os produtos enviados em transportes
 
         String nameProd;
         int quantProd;
 
-        for(Yellow lista : transp){ //array or list :  transp
+        for(Yellow lista : transp){ //array ou lista :  transp
         
             System.out.println("Product Name: "+nameProd +" Quantity: "+quantProd);
         }
     }
 
     
-    public static void viewRelat(Transport transp){
+    public static void viewRelat(Transport transp){ //função exibir relatório completo
         double totalCost;
         double costPSegment;
         String typeTransp;
