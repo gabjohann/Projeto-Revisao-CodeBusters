@@ -15,6 +15,8 @@ public class Menu {
         boolean loop = true;
         String option = "";
 
+        System.out.println("\nSeja bem vindo(a) a Amarelinha! A empresa com transporte mais rápido do planeta.");
+
         do {
 
             System.out.println("\n\n" + ANSI_YELLOW + "#########################################");
@@ -61,8 +63,7 @@ public class Menu {
 
         do {
 
-            //Insert here the first case method
-
+            CheckRoutes.checkRoutes();
 
             System.out.println(ANSI_RED + "\n\nPara retornar ao menu, aperte 'ENTER'" + ANSI_RESET);
             toReturn = scanner.nextLine();
