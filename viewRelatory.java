@@ -1,5 +1,7 @@
 //imports
 
+import java.util.List;
+
 public class viewRelatory {
     
 //Dados Estatísticos
@@ -10,27 +12,61 @@ public class viewRelatory {
 
 //view = system.out.println("");
 
-    public static void viewProdSent(Transport transp){ //criada para facilitar a funcionalidade exibir ---> exibir todos os produtos enviados em transportes
+    public static void viewProdSent(List chosenTransports, List chosenProducts){ //criada para facilitar a funcionalidade exibir ---> exibir todos os produtos enviados em transportes
 
         String nameProd;
         int quantProd;
 
-        for(Yellow lista : transp){ //array ou lista :  transp
+        for(int i=0; i<chosenProducts.size(); i++){ //array ou lista :  transp
         
             System.out.println("Product Name: "+nameProd +" Quantity: "+quantProd);
         }
     }
 
     
-    public static void viewRelat(Transport transp){ //função exibir relatório completo
-        double totalCost;
-        double costPSegment;
+    public static void viewRelat(List listaTransp){ //função exibir relatório completo
+        
+        //-Custo Total-
+        double totalCost = totalCostPSegment+totalCostFTransport;
+        
+        //-Custo por trecho-
+        double costPSegment ;
+        for(int i=0; i<listaTransp.size(); i++){
+           costPSegment = costKm * distanceKm;
+        }
+        
         String typeTransp;
         double averageCostPKm;
-        double averageCostPProduct;
+        
+        //-Custo Médio por produto-
+        double totalcostProduct ;
+        int totalQuantProducts ;
+        int quantProd;
+        for(int i=0; i<listProducts.size(); i++){
+        totalcostProduct = weight * quantProd; //custo por produto
+        totalQuantProducts += quantProd; //quantidade todos os produtos
+        }
+        double averageCostPProduct = totalcostProduct/ totalQuantProducts; //custo medio por produtos
+        
+         //-Custo total por trecho-
         double totalCostPSegment;
+        for(int i=0; i<listaTransp.size(); i++){
+
+            int quantMovedSegment = 0;
+            quantMovedSegment += 1;
+            totalCostPSegment = costPSegment * quantMovedSegment;
+        }
+        
         double totalCostFTransport;
-        int vehDesl;
+
+        //-Número total de veiculos-
+            int vehDesl=0;
+            while(vehDesl<listaTransp.size()){
+                vehDesl++; //calcula quantos veiculos tem cadastrados
+
+            }
+
+        
         String nameProd;
         int quantProd;
 
@@ -46,7 +82,7 @@ public class viewRelatory {
                             "\n"+"Total Cost for each Transport: "+totalCostFTransport+
                             "\n"+"Total of Moved Vehicles: "+vehDesl+
                             "\n"+"Total Itens Transported: "
-                            +viewRelat(transp)+
+                            +viewRelat(listOfProducts)+
                             "\n"+"------------------------------------"+"\n");
     }
 
