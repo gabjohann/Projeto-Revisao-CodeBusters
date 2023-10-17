@@ -1,5 +1,5 @@
 import org.junit.jupiter.api.Test;
-import static org.junit.jupiter.api.Assertions.*;
+import static org.junit.jupiter.api.Assertions.assertEquals;
 
 public class ProductTest {
 
@@ -8,7 +8,7 @@ public class ProductTest {
         // Test the constructor and getter methods
         Product product = new Product("TestGetProduct", 10.0);
 
-        assertEquals("TestProduct", product.getProductName());
+        assertEquals("TestGetProduct", product.getProductName());
         assertEquals(10.0, product.getProductWeight());
         assertEquals(10.0, product.getTotalWeight());
     }
