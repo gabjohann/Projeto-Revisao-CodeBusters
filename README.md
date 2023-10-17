@@ -1,13 +1,13 @@
-Projeto de Revisão - Grupo Code Busters
+# Projeto de Revisão - Grupo Code Busters
 
 Repositório destinado ao versionamento do código desenvovido para o projeto "Amarelinha - Sistema de Transporte", um exercício proposto com intuito de revisarmos o conteúdo aprendido até então no **Geração Caldeira**.
 
 ## Funcionalidades
 
-- Consultar Trechos e Modalidades;
-- Cadastrar transporte;
-- Relatório com dados estatísticos;
-- Testes unitários.
+- Consultar Trechos e Modalidades
+- Cadastrar transporte
+- Relatório com dados estatísticos
+- Testes unitários
 
 ## Tecnologias
 
@@ -53,9 +53,9 @@ Repositório destinado ao versionamento do código desenvovido para o projeto "A
     </td>
     <td align="center">
       <a href="#">
-        <img src="https://github.com/GabrielMartinsPastoriza.png" width="100px;" alt="Foto do Gabriel Martins"/><br>
+        <img src="https://github.com/CruzNathan.png" width="100px;" alt="Foto do Nathan da Cruz"/><br>
         <sub>
-          <b>Gabriel Martins</b>
+          <b>Nathan da Cruz</b>
         </sub>
       </a>
     </td>
