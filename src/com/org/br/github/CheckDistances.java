@@ -5,6 +5,8 @@ import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
 
+import static java.lang.Integer.*;
+
 public class CheckDistances {
     String filePath = "CitiesDistances.csv";
     List<String> cities = new ArrayList<>();
@@ -31,8 +33,7 @@ public class CheckDistances {
                 } else {
                     //Adiciona as colunas da tabela de distancias
                     for (int col = 0; col < values.length; col++) {
-                        int distance = Integer.parseInt(values[col]);
-                        distances[row][col] = distance;
+                        distances[row][col] = parseInt(values[col]);
                     }
                     row++;
                 }
@@ -48,7 +49,6 @@ public class CheckDistances {
     }
 
     public int getDistance(int originCity, int destinationCity) {
-        readFile();
         return distances[originCity][destinationCity];
     }
 
