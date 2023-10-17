@@ -1,8 +1,10 @@
 import java.util.*;
+import java.util.Scanner;
 
-public class TruckMenu {
+public class TransportRegister {
 
-    public static void main(String[] args) {
+    public static void transportRegister() {
+
         Scanner scanner = new Scanner(System.in);
         String cityOfOrigin;
         String cityOfDestination;
@@ -46,7 +48,6 @@ public class TruckMenu {
             System.out.print("Digite o número da cidade de destino: ");
             cityOfDestination = scanner.next();
         }
-
 
 
         System.out.println("Produtos que transportamos: ");

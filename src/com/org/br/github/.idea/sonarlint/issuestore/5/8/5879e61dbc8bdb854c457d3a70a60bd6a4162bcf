@@ -1,0 +1,33 @@
+
+`
+java:S1854"CRemove this useless assignment to local variable "desiredProducts".(ìáºè8çœÈØ³1
+b
+java:S1854"@Remove this useless assignment to local variable "cityOfOrigin".(¨ˆñ•úÿÿÿÿ8èœÈØ³1
+b
+java:S1854)"ERemove this useless assignment to local variable "cityOfDestination".(ãÄç÷8èœÈØ³1
+f
+java:S18547"DRemove this useless assignment to local variable "quantityProducts".(ÆŒ‰ƒøÿÿÿÿ8éœÈØ³1
+W
+java:S1481
+"5Remove this unused "quantityProducts" local variable.(µ´Ù·ÿÿÿÿÿ8íœÈØ³1
+T
+java:S1481"2Remove this unused "productNumber" local variable.(ÕŠºÿÿÿÿÿ8íœÈØ³1
+Y
+java:S1481"7Remove this unused "quantityPerProduct" local variable.(õ¾¨šşÿÿÿÿ8íœÈØ³1
+Q
+java:S1481"4Remove this unused "desiredProducts" local variable.(ìáºè8ïœÈØ³1
+L	java:S106"+Replace this use of System.out by a logger.(ãÚøÿÿÿÿ8ğœÈØ³1
+L	java:S106"+Replace this use of System.out by a logger.(ÿÕˆ©ùÿÿÿÿ8ğœÈØ³1
+G	java:S106"+Replace this use of System.out by a logger.(‘ğŸ¤8ğœÈØ³1
+L	java:S106"+Replace this use of System.out by a logger.(óãüÿÿÿÿ8ñœÈØ³1
+G	java:S106"+Replace this use of System.out by a logger.(»íÛâ8òœÈØ³1
+L	java:S106"+Replace this use of System.out by a logger.(óãüÿÿÿÿ8òœÈØ³1
+G	java:S106""+Replace this use of System.out by a logger.( ö–Ö8òœÈØ³1
+G	java:S106'"+Replace this use of System.out by a logger.(»íÛâ8óœÈØ³1
+G	java:S106("+Replace this use of System.out by a logger.( ö–Ö8óœÈØ³1
+G	java:S106-"+Replace this use of System.out by a logger.(¼«ìğ8óœÈØ³1
+L	java:S106/"+Replace this use of System.out by a logger.(ê©ûÈúÿÿÿÿ8ôœÈØ³1
+L	java:S1062"+Replace this use of System.out by a logger.(Ø–ªùÿÿÿÿ8ôœÈØ³1
+L	java:S1066"+Replace this use of System.out by a logger.(íõÿ¥ûÿÿÿÿ8ôœÈØ³1
+L	java:S106="+Replace this use of System.out by a logger.(õªœãıÿÿÿÿ8õœÈØ³1
+X	java:S125?"<This block of commented-out lines of code should be removed.(©ôÜ8Ü·ÈØ³1
