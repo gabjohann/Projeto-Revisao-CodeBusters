@@ -10,11 +10,16 @@ public class RegisterTransport {
         int productNumber;
         int quantityPerProduct;
 
+        ArrayList<Double> totalCostList = new ArrayList<Double>();
+        ArrayList<String> typeTruckList = new ArrayList<String>();
+        ArrayList<Double> pricesPerKmList = new ArrayList<Double>();
+
         CheckDistances checkDistances = new CheckDistances();
 
         List<String> listOfCities = checkDistances.getCities();
         List<String> listOfProducts = new ArrayList<>(List.of("Celular", "Geladeira", "Air Fryer", "Cadeira", "Luminária", "Lavadora de Roupa", "PlayStation 5", "Nintendo Switch"));
         Map<Integer, Integer> desiredProducts = new HashMap<>();
+
 
         System.out.println("Seja bem vindo(a) a Amarelinha! A empresa com transporte mais rápido do planeta.");
         System.out.println("Cidades atendidas: ");
@@ -91,13 +96,21 @@ public class RegisterTransport {
 
         TheBestTruck mostCostEffectiveTruck = TruckCostBenefitCalculator.findMostCostEffectiveTruck(trucks, cityDistance, totalWeight);
 
+        double totalCost;
         if (mostCostEffectiveTruck != null) {
             System.out.println("O caminhão mais econômico é: " + mostCostEffectiveTruck.getClassification());
-            double totalCost = mostCostEffectiveTruck.calculateCostPerKm(cityDistance);
+             totalCost = mostCostEffectiveTruck.calculateCostPerKm(cityDistance);
             System.out.println("Custo total estimado: " + totalCost);
+
+            pricesPerKmList.add(mostCostEffectiveTruck.getPricePerKm());
+            typeTruckList.add(mostCostEffectiveTruck.getClassification());
+            totalCostList.add(totalCost);
+
+
         } else {
             System.out.println("Não há caminhões disponíveis que atendam aos requisitos de capacidade.");
         }
+
     }
 }
 
