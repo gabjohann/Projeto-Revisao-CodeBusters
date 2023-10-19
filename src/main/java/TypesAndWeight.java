@@ -1,8 +1,10 @@
+import java.util.ArrayList;
 import java.util.Scanner;
 
 public class TypesAndWeight {
     private double totalWeight; // Variável de instância para armazenar o peso total
-
+    ArrayList<String> chosenProductList = new ArrayList<>();
+    ArrayList<Double> productWeightList = new ArrayList<>();
     public double calculateTotalWeight() {
         Product[] options = {
                 new Product("Celular", 0.7),
@@ -30,6 +32,9 @@ public class TypesAndWeight {
 
             double totalEach = options[chosen].getProductWeight() * amount;
             totalWeight += totalEach; // Atualize a variável totalWeight
+
+            chosenProductList.add(options[chosen].getProductName());
+            productWeightList.add(options[chosen].getProductWeight());
         }
         return totalWeight;
     }
